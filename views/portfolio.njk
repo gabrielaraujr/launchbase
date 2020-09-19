@@ -1,0 +1,43 @@
+{% extends 'layout.njk' %}
+
+{% block head %}
+  <title>Portfólio - Gabriel Araujo</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+  <!-- <div id="wrapper"> <h1>Aulas</h1> </div> -->
+
+  <section class="cards cards-aula">
+    {% for item in items %}
+      <div class="card card-aula" id="{{item.id}}">
+        <div class="card__img-container-aula">
+          <img src="https://img.youtube.com/vi/{{item.id}}/maxresdefault.jpg" alt="Imagem de {{item.title}}">
+        </div>
+        <div class="card__content card__content-aula">
+          <p>{{item.title}}</p>
+        </div>
+        <div class="card__info card__info-aula">
+          <p>{{item.duration}}</p>
+          <p class="card__price">{{item.price}}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </section>
+
+  <div class="modal-overlay">
+    <div class="modal">
+      <a class="close-modal">
+        <i class="material-icons">close</i>
+      </a>
+
+      <a class="maximize-modal">
+        <i class="material-icons">crop_free</i>
+      </a>
+
+      <div class="modal-content">
+        <iframe src="" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% block head %}
+    <title>Gabriel Araujo</title>
+  {% endblock %}
+
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="links">
+      <a href="/">Sobre</a>
+      <a href="/portfolio">Aulas</a>
+      <a href="/courses">Cursos</a>
+    </div>
+  </header>
+
+  {% block content %}{% endblock %}
+
+  <script src="/scripts.js"></script>
+</body>
+
+</html>
